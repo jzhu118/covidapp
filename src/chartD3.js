@@ -173,42 +173,17 @@ chart.draw = function (svg, data, title) {
         .on("mouseleave", hideTooltip)
 
     // Add legend
-    g.append("circle").attr("cx", 720).attr("cy", 45).attr("r", 6).style("fill", "red");
-    g.append("circle").attr("cx", 720).attr("cy", 25).attr("r", 6).style("fill", "steelblue");
-    g.append("text").attr("x", 730).attr("y", 45).text("Click to Show/Unshow Weekly new case").attr("font-size", "14px").style("font-size", "15px").attr("alignment-baseline", "middle").on("click", function (d) {
+    g.append("circle").attr("cx", 550).attr("cy", 25).attr("r", 6).style("fill", "red");
+    g.append("circle").attr("cx", 550).attr("cy", 45).attr("r", 6).style("fill", "steelblue");
+    g.append("text").attr("x", 560).attr("y", 25).text("click here to show/hide Covid-19 Weekly New Cases").attr("font-size", "14px").style("font-size", "15px").attr("alignment-baseline", "middle").on("click", function (d) {
         d3.selectAll(".newcase").transition().style("opacity", d3.selectAll(".newcase").style("opacity") == 1 ? 0 : 1);
     });
-    g.append("text").attr("x", 730).attr("y", 25).text("Click to Show/Unshow Weekly ICSA").attr("font-size", "14px").style("font-size", "15px").attr("alignment-baseline", "middle").on("click", function (d) {
+    g.append("text").attr("x", 560).attr("y", 45).text("click here to show/hide Weekly Initial Unemployment Insurance Claims").attr("font-size", "14px").style("font-size", "15px").attr("alignment-baseline", "middle").on("click", function (d) {
         d3.selectAll(".icsa").transition().style("opacity", d3.selectAll(".icsa").style("opacity") == 1 ? 0 : 1);
     });
 
     // Add transition
-    if (title.trim() == "Whole Picture: Weekly ICSA and New Cases of US from 01/25/2020 to 07/18/2020 in D3".trim() || title.trim() == "First Phase: Weekly ICSA and New Cases of US from 01/25/2020 to 03/21/2020 in D3") {
-        var totalLength0 = path0.node().getTotalLength();
-        var totalLength1 = path1.node().getTotalLength();
-
-        d3.selectAll('.icsa')
-            .attr("stroke-dasharray", totalLength0 + " " + totalLength0)
-            .attr("stroke-dashoffset", totalLength0)
-            .transition()
-            .duration(4000)
-            .delay(1000)
-            .ease(d3.easeLinear)
-            .attr("stroke-dashoffset", 0);
-
-        d3.selectAll('.newcase')
-            .attr("stroke-dasharray", totalLength0 + " " + totalLength1)
-            .attr("stroke-dashoffset", totalLength0)
-            .transition()
-            .duration(4000)
-            .delay(1000)
-            .ease(d3.easeLinear)
-            .attr("stroke-dashoffset", 0);
-
-        d3.selectAll("circle").style("opacity", 0).transition().duration(5000).delay(3000).style("opacity", 1);
-    }
-
-    if (title.trim() == "Second Phase: Weekly ICSA and New Cases of US from 03/28/2020 to 06/13/2020 in D3".trim()) {
+    if (title === "Phase 2 - Steady State, 03/21/2020 - 06/13/2020") {
         var totalLength0 = path0.node().getTotalLength();
         var totalLength1 = path1.node().getTotalLength();
 
@@ -231,15 +206,36 @@ chart.draw = function (svg, data, title) {
             .attr("stroke-dashoffset", 0);
 
         d3.selectAll("circle").style("opacity", 0).transition().duration(5000).delay(3000).style("opacity", 1);
-    }
-
-    if (title.trim() == "Third Phase: Weekly ICSA and New Cases of US from 06/20/2020 to 07/18/2020 in D3".trim()) {
+    } else if (title === "Phase 3 - Second Wave, 06/13/2020 - 07/18/2020") {
         var totalLength0 = path0.node().getTotalLength();
         var totalLength1 = path1.node().getTotalLength();
 
         d3.selectAll('.icsa')
             .attr("stroke-dasharray", totalLength0 + " " + totalLength0)
-            .attr("stroke-dashoffset", totalLength0 * 0.33)
+            .attr("stroke-dashoffset", totalLength0 * 0.1)
+            .transition()
+            .duration(2000)
+            .delay(1000)
+            .ease(d3.easeLinear)
+            .attr("stroke-dashoffset", 0);
+
+        d3.selectAll('.newcase')
+            .attr("stroke-dasharray", totalLength0 + " " + totalLength1)
+            .attr("stroke-dashoffset", totalLength1 * 0.45)
+            .transition()
+            .duration(4000)
+            .delay(1000)
+            .ease(d3.easeLinear)
+            .attr("stroke-dashoffset", 0);
+
+        d3.selectAll("circle").style("opacity", 0).transition().duration(5000).delay(3000).style("opacity", 1);
+    } else {
+        var totalLength0 = path0.node().getTotalLength();
+        var totalLength1 = path1.node().getTotalLength();
+
+        d3.selectAll('.icsa')
+            .attr("stroke-dasharray", totalLength0 + " " + totalLength0)
+            .attr("stroke-dashoffset", totalLength0)
             .transition()
             .duration(4000)
             .delay(1000)
@@ -248,7 +244,7 @@ chart.draw = function (svg, data, title) {
 
         d3.selectAll('.newcase')
             .attr("stroke-dasharray", totalLength0 + " " + totalLength1)
-            .attr("stroke-dashoffset", totalLength0 * 0.3)
+            .attr("stroke-dashoffset", totalLength0)
             .transition()
             .duration(4000)
             .delay(1000)

@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       selected: 1,
       data: _.cloneDeep(allPhasesData),
-      title: 'Whole Picture: Weekly ICSA and New Cases of US from 01/25/2020 to 07/18/2020 in D3',
+      title: 'U.S. COVID-19 and Unemployment Overview, 01/25/2020 - 07/18/2020',
       type: 'd3'
     };
 
@@ -30,7 +30,7 @@ class App extends Component {
     this.setState({
       selected: 1,
       data: _.cloneDeep(allPhasesData),
-      title: 'Whole Picture: Weekly ICSA and New Cases of US from 01/25/2020 to 07/18/2020 in D3',
+      title: 'U.S. COVID-19 and Unemployment Overview, 01/25/2020 - 07/18/2020',
       type: 'd3'
     });
   }
@@ -39,7 +39,7 @@ class App extends Component {
     this.setState({
       selected: 2,
       data: _.cloneDeep(firstPhaseData),
-      title: 'First Phase: Weekly ICSA and New Cases of US from 01/25/2020 to 03/21/2020 in D3',
+      title: 'Phase 1 - Outbreak,  01/25/2020 - 03/21/2020',
       type: 'd3'
     });
   }
@@ -48,7 +48,7 @@ class App extends Component {
     this.setState({
       selected: 3,
       data: _.cloneDeep(secondPhaseData),
-      title: 'Second Phase: Weekly ICSA and New Cases of US from 03/28/2020 to 06/13/2020 in D3',
+      title: 'Phase 2 - Steady State, 03/21/2020 - 06/13/2020',
       type: 'd3'
     });
   }
@@ -57,7 +57,7 @@ class App extends Component {
     this.setState({
       selected: 4,
       data: _.cloneDeep(thirdPhaseData),
-      title: 'Third Phase: Weekly ICSA and New Cases of US from 06/20/2020 to 07/18/2020 in D3',
+      title: 'Phase 3 - Second Wave, 06/13/2020 - 07/18/2020',
       type: 'd3'
     });
   }
@@ -70,15 +70,15 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Weekly ICSA and New Cases of US from 01/25/2020 to 07/18/2020 in D3</h2>
+          <h2>U.S. COVID-19 and Unemployment Interactive Narrative Visualization</h2>
         </div>
 
         <div className="container">
           <div className="nav">
-            <button type='button' className={"btn btn-d3 " + (this.state.selected === 1 ? 'active' : '')} onClick={this.allPhasesInD3Selected}>Whole Picture</button>
-            <button type='button' className={"btn btn-d3 " + (this.state.selected === 2 ? 'active' : '')} onClick={this.fristPhaseInD3Selected}>First Phase</button>
-            <button type='button' className={"btn btn-d3 " + (this.state.selected === 3 ? 'active' : '')} onClick={this.secondPhaseInD3Selected}>Second Phase</button>
-            <button type='button' className={"btn btn-d3 " + (this.state.selected === 4 ? 'active' : '')} onClick={this.thirdPhaseInD3Selected}>Third Phase</button>
+            <button type='button' className={"btn btn-d3 " + (this.state.selected === 1 ? 'active' : '')} onClick={this.allPhasesInD3Selected}>Overview</button>
+            <button type='button' className={"btn btn-d3 " + (this.state.selected === 2 ? 'active' : '')} onClick={this.fristPhaseInD3Selected}>Phase 1</button>
+            <button type='button' className={"btn btn-d3 " + (this.state.selected === 3 ? 'active' : '')} onClick={this.secondPhaseInD3Selected}>Phase 2</button>
+            <button type='button' className={"btn btn-d3 " + (this.state.selected === 4 ? 'active' : '')} onClick={this.thirdPhaseInD3Selected}>Phase 3</button>
           </div>
 
           {content}
@@ -99,7 +99,12 @@ class App extends Component {
         </div>
 
         <div>
-          <p className="text">blah blah</p>
+          <p class="text"><span class="textHighlight">Designer:</span></p>
+          <p class= "text">Jialiang Zhu, zhu102@illinois.edu</p>
+					<p class="text"><span class="textHighlight">Datasource:</span></p>
+					<a href="https://www.cdc.gov/covid-data-tracker/index.html#cases">U.S. Centers for Disease Control and Prevention (CDC)</a>
+          <p></p>
+          <a href="https://fred.stlouisfed.org/series/ICSA">Federal Reserve Bank of St.Louis</a>
         </div>
       </div>
     );
