@@ -176,10 +176,10 @@ chart.draw = function (svg, data, title) {
     g.append("circle").attr("cx", 550).attr("cy", 25).attr("r", 6).style("fill", "red");
     g.append("circle").attr("cx", 550).attr("cy", 45).attr("r", 6).style("fill", "steelblue");
     g.append("text").attr("x", 560).attr("y", 25).text("click here to show/hide Covid-19 Weekly New Cases").attr("font-size", "14px").style("font-size", "15px").attr("alignment-baseline", "middle").on("click", function (d) {
-        d3.selectAll(".newcase").transition().style("opacity", d3.selectAll(".newcase").style("opacity") == 1 ? 0 : 1);
+        d3.selectAll(".newcase").transition().style("opacity", d3.selectAll(".newcase").style("opacity") === 1 ? 0 : 1);
     });
     g.append("text").attr("x", 560).attr("y", 45).text("click here to show/hide Weekly Initial Unemployment Insurance Claims").attr("font-size", "14px").style("font-size", "15px").attr("alignment-baseline", "middle").on("click", function (d) {
-        d3.selectAll(".icsa").transition().style("opacity", d3.selectAll(".icsa").style("opacity") == 1 ? 0 : 1);
+        d3.selectAll(".icsa").transition().style("opacity", d3.selectAll(".icsa").style("opacity") === 1 ? 0 : 1);
     });
 
     // Add transition
@@ -207,8 +207,8 @@ chart.draw = function (svg, data, title) {
 
         d3.selectAll("circle").style("opacity", 0).transition().duration(5000).delay(3000).style("opacity", 1);
     } else if (title === "Phase 3 - Second Wave, 06/13/2020 - 07/18/2020") {
-        var totalLength0 = path0.node().getTotalLength();
-        var totalLength1 = path1.node().getTotalLength();
+        totalLength0 = path0.node().getTotalLength();
+        totalLength1 = path1.node().getTotalLength();
 
         d3.selectAll('.icsa')
             .attr("stroke-dasharray", totalLength0 + " " + totalLength0)
@@ -230,8 +230,8 @@ chart.draw = function (svg, data, title) {
 
         d3.selectAll("circle").style("opacity", 0).transition().duration(5000).delay(3000).style("opacity", 1);
     } else {
-        var totalLength0 = path0.node().getTotalLength();
-        var totalLength1 = path1.node().getTotalLength();
+        totalLength0 = path0.node().getTotalLength();
+        totalLength1 = path1.node().getTotalLength();
 
         d3.selectAll('.icsa')
             .attr("stroke-dasharray", totalLength0 + " " + totalLength0)
@@ -253,6 +253,7 @@ chart.draw = function (svg, data, title) {
 
         d3.selectAll("circle").style("opacity", 0).transition().duration(5000).delay(3000).style("opacity", 1);
     }
+
     // Add title
     g.append('text')
         .attr('class', 'chart-title')

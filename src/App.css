@@ -11,19 +11,20 @@
   padding: 0;
 }
 
+h2 {
+  color: red;
+}
+
 .textHighlight {
   color: red;
 }
 
 .annotation {
   position: absolute;
-}
-
-#step0-high-annotation {
-  left: 100px;
-  top: 130px;
-  width: 140px;
-  display: none;
+  left: -105px;
+  top: -3px;
+  width: 0px;
+  color: black;
 }
 
 #step1-high-annotation {

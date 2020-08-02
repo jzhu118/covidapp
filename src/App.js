@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import gear from './gear.png';
 import { allPhasesData as allPhasesData } from './data/allPhasesData';
 import { firstPhasesData as firstPhaseData } from './data/firstPhaseData';
 import { secondPhasesData as secondPhaseData } from './data/secondPhaseData';
@@ -8,7 +8,6 @@ import { thirdPhaseData as thirdPhaseData } from './data/thirdPhaseData';
 import ChartD3 from './ChartD3.jsx';
 import _ from 'lodash';
 import './App.css';
-import arrowImage from './arrow.png';
 
 class App extends Component {
   constructor(props) {
@@ -65,11 +64,10 @@ class App extends Component {
   render() {
     let content;
     content = <ChartD3 data={this.state.data} title={this.state.title} />;
-    //<img src={arrowImage} className="image" alt="arrow" />
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={gear} className="App-logo" alt="logo" />
           <h2>U.S. COVID-19 and Unemployment Interactive Narrative Visualization</h2>
         </div>
 
@@ -83,19 +81,16 @@ class App extends Component {
 
           {content}
           
-          <div class="annotation" id={(this.state.selected === 1 ? "step0-high-annotation" : '')}>
-            <h4>0 annotation</h4>
-          </div>
           <div class="annotation" id={(this.state.selected === 2 ? "step1-high-annotation" : '')}>
-            <h4>First annotation</h4>
+            <h2>Outbreak</h2>
           </div>
           <div class="annotation" id={(this.state.selected === 3 ? "step2-high-annotation" : '')}>
-            <h4>Second annotation</h4>
+            <h2>Steady State</h2>
           </div>
           <div class="annotation" id={(this.state.selected === 4 ? "step3-high-annotation" : '')}>
-            <h4>Third annotation</h4>
+            <h2>Second Wave</h2>
           </div>
-
+          
         </div>
 
         <div>
