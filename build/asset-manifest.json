@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/jzcovidApp/static/css/main.c341e75c.chunk.css",
-    "main.js": "/jzcovidApp/static/js/main.7c485edd.chunk.js",
-    "main.js.map": "/jzcovidApp/static/js/main.7c485edd.chunk.js.map",
-    "runtime-main.js": "/jzcovidApp/static/js/runtime-main.d6030bc4.js",
-    "runtime-main.js.map": "/jzcovidApp/static/js/runtime-main.d6030bc4.js.map",
-    "static/js/2.8df1e9cd.chunk.js": "/jzcovidApp/static/js/2.8df1e9cd.chunk.js",
-    "static/js/2.8df1e9cd.chunk.js.map": "/jzcovidApp/static/js/2.8df1e9cd.chunk.js.map",
-    "index.html": "/jzcovidApp/index.html",
-    "precache-manifest.145670ff87558b699a8d79a4e30ca0c3.js": "/jzcovidApp/precache-manifest.145670ff87558b699a8d79a4e30ca0c3.js",
-    "service-worker.js": "/jzcovidApp/service-worker.js",
-    "static/css/main.c341e75c.chunk.css.map": "/jzcovidApp/static/css/main.c341e75c.chunk.css.map",
-    "static/js/2.8df1e9cd.chunk.js.LICENSE.txt": "/jzcovidApp/static/js/2.8df1e9cd.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/jzcovidApp/static/media/logo.5d5d9eef.svg"
+    "main.css": "/covidapp/static/css/main.c341e75c.chunk.css",
+    "main.js": "/covidapp/static/js/main.b3e392f4.chunk.js",
+    "main.js.map": "/covidapp/static/js/main.b3e392f4.chunk.js.map",
+    "runtime-main.js": "/covidapp/static/js/runtime-main.2e02ef70.js",
+    "runtime-main.js.map": "/covidapp/static/js/runtime-main.2e02ef70.js.map",
+    "static/js/2.8df1e9cd.chunk.js": "/covidapp/static/js/2.8df1e9cd.chunk.js",
+    "static/js/2.8df1e9cd.chunk.js.map": "/covidapp/static/js/2.8df1e9cd.chunk.js.map",
+    "index.html": "/covidapp/index.html",
+    "precache-manifest.fc6d647e1812149ec3e518293d2cb07c.js": "/covidapp/precache-manifest.fc6d647e1812149ec3e518293d2cb07c.js",
+    "service-worker.js": "/covidapp/service-worker.js",
+    "static/css/main.c341e75c.chunk.css.map": "/covidapp/static/css/main.c341e75c.chunk.css.map",
+    "static/js/2.8df1e9cd.chunk.js.LICENSE.txt": "/covidapp/static/js/2.8df1e9cd.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/covidapp/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d6030bc4.js",
+    "static/js/runtime-main.2e02ef70.js",
     "static/js/2.8df1e9cd.chunk.js",
     "static/css/main.c341e75c.chunk.css",
-    "static/js/main.7c485edd.chunk.js"
+    "static/js/main.b3e392f4.chunk.js"
   ]
 }
