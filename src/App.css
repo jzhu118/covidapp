@@ -1,0 +1,122 @@
+
+.container {
+  margin: 0 15px;
+  padding: 5px;
+}
+
+.text {
+  font: 16px Arial;
+  fill: #FFFFFF;
+  margin: 10px 30px 10px 30px;
+  padding: 0;
+  text-align: center;
+}
+
+.annotation {
+  position: absolute;
+}
+
+#step0-high-annotation {
+  left: 100px;
+  top: 130px;
+  width: 140px;
+  display: none;
+}
+
+#step1-high-annotation {
+  left: 600px;
+  top: 460px;
+  width: 140px;
+}
+
+#step2-high-annotation {
+  left: 1200px;
+  top: 500px;
+  width: 140px;
+}
+
+#step3-high-annotation {
+  left: 1260px;
+  top: 460px;
+  width: 140px;
+}
+
+.nav {
+  margin: 2em auto;
+  display: inline-block;
+}
+
+.nav .btn {
+  margin: 0 8px;
+  border: px solid #ececec;
+  border-radius: 10px;
+  color: #ffffff;
+  outline: none;
+  box-shadow: 5px 10px #888888;
+  size: 'lg';
+  padding: 15px 32px;
+  font-size: 20px;
+}
+
+.nav .btn-d3 {
+  background: #508CC8;
+}
+
+.nav .btn-d3:focus, .nav .btn-d3:hover, .nav .btn-d3.active {
+  background:  #3F51B5;
+}
+
+#info-window {
+  margin: 1rem .6rem;
+  text-align: left;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 80px;
+  height: 35px;
+  padding: 2px;
+  font: 12px sans-serif;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.image{
+  bottom:80%;
+  position:absolute;
+  animation: run linear 5s infinite alternate;
+}     
+
+@keyframes run {
+  0% { left: 0;}
+  50% { left : 100%;}
+  100% { left: 0;}
+}
+/* Default style */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 50px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
